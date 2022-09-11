@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color In One Click!!!</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .btn{
+            background-color: rgb(30, 30, 30);
+            color: #ffffff;
+            padding: 16px 24px;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn:hover{
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn" onclick="changeColor()">Click me to Change Background</button>
+
+    <script>
+
+        let body = document.body;
+
+        function changeColor() {
+            let a = Math.floor((Math.random() * 255));
+            let b = Math.floor((Math.random() * 255));
+            let c = Math.floor((Math.random() * 255));
+
+            body.style.backgroundColor = `rgb(${a}, ${b}, ${c})`;
+        }
+    </script>
+</body>
+</html>
